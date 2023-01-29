@@ -71,7 +71,12 @@ public class Game {
 
         this.backpack = new Circle(Constants.BACKPACK_LOC[0], Constants.BACKPACK_LOC[1], Constants.BACKPACK_RADIUS);
 
-        this.gamePane.getChildren().addAll(this.dock, this.forest);
+        this.mudHole = new Rectangle(Constants.MUDHOLE_SIZE[0], Constants.MUDHOLE_SIZE[1]);
+        this.mudHole.setX(Constants.MUDHOLE_LOC[0]);
+        this.mudHole.setY(Constants.MUDHOLE_LOC[1]);
+
+
+        this.gamePane.getChildren().addAll(this.dock, this.forest, this.mudHole);
     }
 
 
