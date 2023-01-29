@@ -58,6 +58,11 @@ public class Game {
                 Constants.START_LOCS[1]);
         this.smitty.setSize(Constants.SMITTY_SIZE);
 
+        this.morriss = new NPCharacter(this.gamePane, "./HACKATBROWNSLAY/transparent-morriss.png",
+                Constants.START_LOCS[2]);
+
+        this.provi = new NPCharacter(this.gamePane, "./HACKATBROWNSLAY/transparent-provi.png",
+                Constants.START_LOCS[3]);
     }
 
     private void createLocs(){
@@ -76,7 +81,7 @@ public class Game {
         this.mudHole.setY(Constants.MUDHOLE_LOC[1]);
 
 
-        this.gamePane.getChildren().addAll(this.dock, this.forest, this.mudHole);
+//        this.gamePane.getChildren().addAll(this.forest);
     }
 
 
@@ -106,10 +111,10 @@ public class Game {
         if (this.imageCount < 2 && this.mainC.intersects(this.backpack)){
             this.changeImage();
         }
-        if(this.imageCount > 1 && this.imageCount < 6 && this.mainC.intersects(this.dock)){
+        if(this.imageCount > 1 && this.imageCount < 5 && this.mainC.intersects(this.dock)){
             this.changeImage();
         }
-        if(this.imageCount > 5 && this.imageCount <9 && this.mainC.intersects(this.mudHole)){
+        if(this.imageCount > 4 && this.imageCount < 9 && this.mainC.intersects(this.mudHole)){
             this.changeImage();
         }
     }
