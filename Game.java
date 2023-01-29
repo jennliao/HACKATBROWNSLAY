@@ -80,8 +80,11 @@ public class Game {
         this.mudHole.setX(Constants.MUDHOLE_LOC[0]);
         this.mudHole.setY(Constants.MUDHOLE_LOC[1]);
 
+        this.campfire = new Rectangle(Constants.CAMPFIRE_SIZE[0], Constants.CAMPFIRE_SIZE[1]);
+        this.campfire.setX(Constants.CAMPFIRE_LOC[0]);
+        this.campfire.setY(Constants.CAMPFIRE_LOC[1]);
 
-//        this.gamePane.getChildren().addAll(this.forest);
+        this.gamePane.getChildren().addAll(this.campfire);
     }
 
 
@@ -149,22 +152,22 @@ public class Game {
                 this.background.setImage(new Image("./HACKATBROWNSLAY/map8.jpg"));
                 break;
             case 9:
-                this.background.setImage(new Image("./HACKATBROWNSLAY/map10.jpg"));
+                this.background.setImage(new Image("./HACKATBROWNSLAY/map9.jpg"));
                 break;
             case 10:
-                this.background.setImage(new Image("./HACKATBROWNSLAY/map11.jpg"));
+                this.background.setImage(new Image("./HACKATBROWNSLAY/map10.jpg"));
                 break;
             case 11:
-                this.background.setImage(new Image("./HACKATBROWNSLAY/map12.jpg"));
+                this.background.setImage(new Image("./HACKATBROWNSLAY/map11.jpg"));
                 break;
             case 12:
-                this.background.setImage(new Image("./HACKATBROWNSLAY/map13.jpg"));
+                this.background.setImage(new Image("./HACKATBROWNSLAY/map12.jpg"));
                 break;
             case 13:
-                this.background.setImage(new Image("./HACKATBROWNSLAY/map14.jpg"));
+                this.background.setImage(new Image("./HACKATBROWNSLAY/map13.jpg"));
                 break;
             case 14:
-                this.background.setImage(new Image("./HACKATBROWNSLAY/map15.jpg"));
+                this.background.setImage(new Image("./HACKATBROWNSLAY/map14.jpg"));
                 break;
         }
         this.imageCount++;

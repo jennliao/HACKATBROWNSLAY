@@ -14,6 +14,7 @@ public class Constants {
     public static final int[] DOCK_SIZE = {90, 60}; //width, height
     public static final int[] FOREST_SIZE = {125, 150};
     public static final int[] MUDHOLE_SIZE = {200, 300};
+    public static final int[] CAMPFIRE_SIZE = {100, 50};
     public static final int BACKPACK_RADIUS = 70;
 
     public static final int[] DOCK_LOC = {150, 390};
@@ -21,5 +22,5 @@ public class Constants {
     public static final int[] BACKPACK_LOC = {515, 115};
     public static final int[] FOREST_LOC = {265,0};
     public static final int[] MUDHOLE_LOC = {770, 150};
-    public static final int[] CAMPFIRE_LOC = {};
+    public static final int[] CAMPFIRE_LOC = {425, 300};
 }
