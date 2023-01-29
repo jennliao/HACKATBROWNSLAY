@@ -101,6 +101,9 @@ public class Game {
         if (this.imageCount < 2 && this.mainC.intersects(this.backpack)){
             this.changeImage();
         }
+        if(this.imageCount > 1 && this.imageCount < 6 && this.mainC.intersects(this.dock)){
+            this.changeImage();
+        }
     }
 
     private void changeImage(){
@@ -111,6 +114,16 @@ public class Game {
             case 1:
                 this.background.setImage(new Image("./HACKATBROWNSLAY/map-with-tent.jpg"));
                 break;
+            case 2:
+                this.background.setImage(new Image("./HACKATBROWNSLAY/map3.jpg"));
+                break;
+            case 3:
+                this.background.setImage(new Image("./HACKATBROWNSLAY/map4.jpg"));
+                break;
+            case 4:
+                this.background.setImage(new Image("./HACKATBROWNSLAY/map5.jpg"));
+                break;
+
         }
         this.imageCount++;
     }
