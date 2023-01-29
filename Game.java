@@ -123,7 +123,33 @@ public class Game {
         if(this.imageCount > 8 && this.imageCount < 11 && this.mainC.intersects(this.forest)){
             this.changeImage();
         }
+        if(this.imageCount == 11 && this.mainC.intersects(this.campfire)){
+            this.finalsequence;
+        }
     }
+
+    private void finalSequence(){
+        int centerX = 500;
+        int centerY= 550;
+        this.changeImage();
+        smitty.setX(centerX - 100);
+        smitty.setY(centerY - 100);
+        morriss.setX(centerX +100);
+        morriss.setY(centerY +100);
+        provi.setX(centerX -100);
+        provi.setY(centerY +100);
+
+        KeyFrame kf = new KeyFrame(
+                Duration.seconds(1),
+                (ActionEvent e) -> this.changeImage());
+        Timeline timeline = new Timeline(kf);
+
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
+
+    }
+
+
 
     private void changeImage(){
         switch (this.imageCount) {
@@ -169,6 +195,15 @@ public class Game {
             case 14:
                 this.background.setImage(new Image("./HACKATBROWNSLAY/map14.jpg"));
                 break;
+
+        }
+        if(imageCount > 14){
+            if(imageCount % 2 == 0){
+                this.background.setImage(new Image("./HACKATBROWNSLAY/map13.jpg"))
+            }
+            else{
+                this.background.setImage(new Image("./HACKATBROWNSLAY/map14.jpg"))
+            }
         }
         this.imageCount++;
     }

@@ -55,4 +55,10 @@ public class Character {
     public void moveDown(){
         this.character.setY(this.character.getY() + 15);
     }
+    public void setX(int xpos){
+        this.character.setX(xpos);
+    }
+    public void setY(int ypos){
+        this.character.setY(ypos);
+    }
 }
