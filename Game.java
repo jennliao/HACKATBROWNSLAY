@@ -106,7 +106,7 @@ public class Game {
     private void changeImage(){
         switch (this.imageCount) {
             case 0:
-                this.background.setImage(new Image("./HACKATBROWNSLAY/map-with-tent.jpg"));
+                this.background.setImage(new Image("./HACKATBROWNSLAY/map1.jpg"));
                 break;
             case 1:
                 this.background.setImage(new Image("./HACKATBROWNSLAY/map-with-tent.jpg"));
