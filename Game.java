@@ -31,10 +31,12 @@ public class Game {
     private boolean builtTent;
     private boolean collectedWood;
     private boolean mudFought;
+    private int imageCount;
 
     public Game(Pane gamePane, ImageView background){
         this.gamePane = gamePane;
         this.background = background;
+        this.imageCount = 0;
 
         this.setTasks();
         this.createLocs();
@@ -95,29 +97,29 @@ public class Game {
 
     }
 
-    private void updateBackPackTimeline(){
-        if (this.mainC.intersects(this.backpack)){
-
-            this.background.setImage(new Image("./HACKATBROWNSLAY/map1.jpg"));
-            System.out.println("test");
-            this.background.setImage(new Image("./HACKATBROWNSLAY/map-with-tent.jpg"));
+    private void updateTimeline(){
+        if (this.imageCount < 2 && this.mainC.intersects(this.backpack)){
+            this.changeImage();
         }
     }
 
-    private int changeImage(int imageCount){
-        switch (imageCount) {
+    private void changeImage(){
+        switch (this.imageCount) {
             case 0:
-                this.background.setImage(this.background.setImage(new Image("./HACKATBROWNSLAY/map-with-tent.jpg"));
-
-
+                this.background.setImage(new Image("./HACKATBROWNSLAY/map-with-tent.jpg"));
+                break;
+            case 1:
+                this.background.setImage(new Image("./HACKATBROWNSLAY/map-with-tent.jpg"));
+                break;
         }
+        this.imageCount++;
     }
 
 
     private void backpackTimeline(){
         KeyFrame kf = new KeyFrame(
                 Duration.seconds(1),
-                (ActionEvent e) -> this.updateBackPackTimeline());
+                (ActionEvent e) -> this.updateTimeline());
         Timeline timeline = new Timeline(kf);
 
         timeline.setCycleCount(Animation.INDEFINITE);
